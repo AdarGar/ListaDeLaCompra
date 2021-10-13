@@ -1,0 +1,8 @@
+<h2>Lista de frutas</h2>
+<p>
+  Producto: <input type="text" placeholder="producto" [(ngModel)]="product" />
+</p>
+<p>Cantidad: <input type="number" placeholder="0" [(ngModel)]="quantity" /></p>
+<p>Precio(€):<input type="number" placeholder="0" [(ngModel)]="price" /></p>
+<button (click)="addCart()">Add cart</button>
+<app-cart (removeList)="clearList()"  [list]="list" (removeItem)="removeItem($event)"></app-cart>

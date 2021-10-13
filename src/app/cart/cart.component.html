@@ -1,0 +1,8 @@
+<app-item
+  [item]="item"
+  *ngFor="let item of list"
+  (removeMe)="removeItemFather($event)"
+></app-item>
+
+<button (click)="sumar()">Pagar</button>
+<p [hidden]="total === 0">Total a pagar: {{ total }} €</p>
